@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrueTemp</title>
+  <link rel="stylesheet" href="WeatherApp.css" />
+</head>
+<body>
+  <div id="weather-background"></div>
+
+  <header>
+    <h1>TrueTemp</h1>
+    <p>Your reliable source for accurate weather information.</p>
+  </header>
+
+  <main>
+    <div class="weather-card">
+
+      <!-- search form -->
+      <form id="location-form">
+        <input id="location-input" type="text" placeholder="Enter city..." required />
+        <button type="submit" id="search-btn">Search</button>
+        <button type="button" id="geo-btn">📍Use My Location</button>
+
+        <label id="unit-label">
+          <input type="checkbox" id="unit-toggle"/>
+          <span class="toggle-switch"></span>
+            <span id="unit-text">°F / °C</span>
+        </label>
+      </form>
+
+      <!-- error -->
+      <p id="error-message"></p>
+
+      <!-- current weather display -->
+      <section id="current-weather">
+        <h2 id="city-name"></h2>
+        <img id="weather-icon" />
+        <p id="forecast"></p>
+        <p><span id="high-temp"></span> / <span id="low-temp"></span></p>
+        <p>Humidity: <span id="humidity"></span></p>
+        <p>Wind: <span id="wind-speed"></span></p>
+      </section>
+
+      <!-- hourly forecast display -->
+      <section id="hourly-forecast">
+        <h3>Hourly Forecast</h3>
+        <div id="hourly-container"></div>
+      </section>
+
+      <!-- weekly forecast display -->
+      <section id="weekly-forecast">
+        <h3>5-Day Forecast</h3>
+        <div id="weekly-container"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="WeatherApp.js"></script>
+</body>
+</html>
